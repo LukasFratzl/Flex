@@ -1,0 +1,87 @@
+@import "variables.less";
+
+@Yellow: #d6f761;
+@green: #70f764;
+
+// Links
+@link-color-dark-theme: @Yellow;
+@link-hover-color: @green;
+
+// Tag cloud
+@tag-bg-dark-theme: @Yellow;
+@tag-hover-color: @green;
+
+// Buttons
+@btn-bg: fade(#c4fb00, 41%);
+@btn-hover-color: fade(@green, 44%);
+
+@btn-text-color: @white;
+
+//Link color stuff START
+a {
+  color: @link-color-dark-theme;
+  text-decoration: none;
+}
+
+a:hover {
+  color: @link-hover-color;
+}
+
+.tag-cloud {
+  a {
+    background-color: @tag-bg-dark-theme;
+  }
+
+  a:hover {
+    background-color: @tag-hover-color;
+  }
+}
+
+//Link color stuff END
+
+// Button color stuff START
+a.btn,
+section#isso-thread section.auth-section p.post-action input {
+  background-color: @btn-bg;
+  color: @btn-text-color;
+}
+
+a.btn:hover {
+  background-color: @btn-hover-color;
+}
+
+// Button color stuff END
+
+/*This is for the ` ` code*/
+:not(pre) > code {
+  color: white ~'!important';
+  background-color: black ~'!important';
+}
+
+/*Stork Search START*/
+.stork a:link,
+.stork a:visited {
+  color: @Yellow ~'!important';
+}
+
+.stork-output-visible {
+  border: 1px solid fade(@light-grey, 22%) ~'!important';
+  background-color: @solid-dark-grey ~'!important';
+}
+
+.stork-input {
+  color: @light-grey;
+  background-color: @solid-dark-grey;
+  border: 1px solid fade(@light-grey, 22%) ~'!important';
+}
+
+.stork-excerpt-container {
+  color: @light-grey;
+}
+
+.stork .stork-close-button {
+  background-color: transparent;
+}
+
+/*Stork Search END*/
+

@@ -1,0 +1,79 @@
+@import "variables.less";
+
+@blue: #64b2f7;
+@light-blue: #22d7d7;
+
+// Links
+@link-color: @blue;
+@link-hover-color: @light-blue;
+
+// Tag cloud
+@tag-bg: @blue;
+@tag-hover-color: @light-blue;
+
+// Buttons
+@btn-bg: fade(@blue, 80%);
+@btn-hover-color: fade(@light-blue, 44%);
+
+//@body-bg: #cce5ff;
+//@body-bg: #cdffff;
+//@body-bg: #cdffd5;
+@body-bg: #dfffcd; // #dfffcd That's pretty solid :)
+
+@github-bg-color: Transparent;
+@youtube-bg-color: Transparent;
+
+
+/*Code Block > START */
+.highlight {
+  background: transparent ~'!important';
+}
+
+blockquote {
+  background-color: transparent ~'!important';
+}
+
+pre {
+  background-color: transparent ~'!important';
+  border-left-color: transparent ~'!important';
+}
+
+/*This is for the ` ` code*/
+:not(pre) > code {
+  color: black ~'!important';
+  background-color: #f1ff90 ~'!important';
+}
+
+/*Code Block > END */
+
+/*Stork Search START*/
+.stork a:link,
+.stork a:visited {
+  color: @blue ~'!important';
+}
+
+.stork-output-visible {
+  border: 1px solid fade(@light-grey, 22%) ~'!important';
+  background-color: @grey ~'!important';
+}
+
+.stork-input {
+  color: @light-grey;
+  background-color: @grey;
+  border: 1px solid fade(@light-grey, 22%) ~'!important';
+}
+
+.stork-excerpt-container {
+  color: @light-grey;
+}
+
+.stork .stork-close-button {
+  background-color: transparent;
+}
+
+/*Stork Search END*/
+
+
+
+
+
