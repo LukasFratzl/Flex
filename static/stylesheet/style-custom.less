@@ -1,19 +1,21 @@
 @import "variables.less";
 
-@blue: #64b2f7;
-@light-blue: #22d7d7;
+@red: #b07b7b;
+@green1: #7bb092;
+
+@sidebar-bg: @red;
 
 // Links
-@link-color: @blue;
-@link-hover-color: @light-blue;
+@link-color: @red;
+@link-hover-color: @green1;
 
 // Tag cloud
-@tag-bg: @blue;
-@tag-hover-color: @light-blue;
+@tag-bg: @red;
+@tag-hover-color: @green1;
 
 // Buttons
-@btn-bg: fade(@blue, 80%);
-@btn-hover-color: fade(@light-blue, 44%);
+@btn-bg: fade(@red, 80%);
+@btn-hover-color: fade(@green1, 44%);
 
 //@body-bg: #cce5ff;
 //@body-bg: #cdffff;
@@ -22,6 +24,11 @@
 
 @github-bg-color: Transparent;
 @youtube-bg-color: Transparent;
+
+aside div img
+{
+  border-radius: unset ~'!important';
+}
 
 
 /*Code Block > START */
@@ -49,26 +56,27 @@ pre {
 /*Stork Search START*/
 .stork a:link,
 .stork a:visited {
-  color: @blue ~'!important';
+  color: @white ~'!important';
 }
 
 .stork-output-visible {
-  border: 1px solid fade(@light-grey, 22%) ~'!important';
-  background-color: @grey ~'!important';
+  border: 1px solid @white ~'!important';
+  background-color: @red ~'!important';
 }
 
 .stork-input {
-  color: @light-grey;
-  background-color: @grey;
-  border: 1px solid fade(@light-grey, 22%) ~'!important';
+  color: @white;
+  background-color: @red;
+  border: 1px solid @white ~'!important';
 }
 
 .stork-excerpt-container {
-  color: @light-grey;
+  color: @white;
 }
 
 .stork .stork-close-button {
   background-color: transparent;
+  color: @white ~'!important';
 }
 
 /*Stork Search END*/
