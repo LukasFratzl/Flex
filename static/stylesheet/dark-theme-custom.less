@@ -4,11 +4,11 @@
 @green2: #70f764;
 
 // Links
-@link-color-dark-theme: @yellow;
+@link-color: @yellow;
 @link-hover-color: @green2;
 
 // Tag cloud
-@tag-bg-dark-theme: @yellow;
+@tag-bg: @yellow;
 @tag-hover-color: @green2;
 
 // Buttons
@@ -19,7 +19,7 @@
 
 //Link color stuff START
 a {
-  color: @link-color-dark-theme;
+  color: @link-color;
   text-decoration: none;
 }
 
@@ -29,7 +29,7 @@ a:hover {
 
 .tag-cloud {
   a {
-    background-color: @tag-bg-dark-theme;
+    background-color: @tag-bg;
   }
 
   a:hover {
@@ -82,6 +82,29 @@ a.btn:hover {
 .stork .stork-close-button {
   background-color: transparent;
 }
-
 /*Stork Search END*/
 
+
+// Summary START
+summary::marker {
+  color: @yellow;
+}
+
+//summary::after {
+//  background-color: @yellow;
+//}
+
+//summary:hover {
+//  background-color: @btn-hover-color;
+//}
+
+details[open] > summary {
+  background-color: @btn-hover-color;
+}
+
+
+summary {
+  background-color: @btn-bg;
+  color: @btn-text-color;;
+}
+// Summary END

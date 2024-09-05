@@ -78,8 +78,63 @@ pre {
   background-color: transparent;
   color: @white ~'!important';
 }
-
 /*Stork Search END*/
+
+
+//Summary START
+summary::marker {
+  color: @btn-text-color;
+  font-size: 1.2em;
+}
+
+//summary:hover {
+//  background-color: @btn-hover-color;
+//}
+
+details[open] > summary {
+  background-color: @btn-hover-color;
+}
+
+summary {
+  display: inline flow-root list-item;
+  padding: 0.1em 0.1em 0.1em 0.8em;
+  background-color: @btn-bg;
+  color: @btn-text-color;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border: none;
+  border-radius: .25em;
+  margin-bottom: 20px;
+  font-size: 0.8em;
+}
+
+//summary::after {
+//  content: '';
+//  width: 20px;
+//  height: 20px;
+//  background: url('https://lukas.read-books.org/nextcloud/index.php/s/wL4cqnFKff5ZcNB/preview') no-repeat;
+//  //color: @green1;
+//  background-size: cover;
+//  margin-left: .75em;
+//  transition: 0.2s;
+//}
+
+summary::after {
+  color: @white;
+  font-size: 0.8em;
+  font-style: italic;
+  padding-left: 10px;
+  padding-right: .6em;
+  content: " [Show]";
+}
+
+details[open] > summary::after {
+  content: " [Hide]";
+}
+//Summary END
+
+
 
 
 
