@@ -8,8 +8,8 @@
 @link-hover-color: @green2;
 
 // Tag cloud
-@tag-bg: @yellow;
-@tag-hover-color: @green2;
+@tag-bg: fade(#c4fb00, 41%);;
+@tag-hover-color: fade(@green2, 44%);
 
 // Buttons
 @btn-bg: fade(#c4fb00, 41%);
@@ -30,6 +30,7 @@ a:hover {
 .tag-cloud {
   a {
     background-color: @tag-bg;
+    color: @tag-text-color;
   }
 
   a:hover {
@@ -108,3 +109,8 @@ summary {
   color: @btn-text-color;;
 }
 // Summary END
+
+#theme_toggle_image_top
+{
+  content:url("https://lukas.read-books.org/nextcloud/index.php/s/8zK9mNATTwKqiZa/preview");
+}
