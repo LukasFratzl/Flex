@@ -1,19 +1,19 @@
 @import "variables.less";
 
-@yellow: #d6f761;
-@green2: #70f764;
+@purple: #b16286;
+@light-purple: #d3869b;
 
 // Links
-@link-color: @yellow;
-@link-hover-color: @green2;
+@link-color: @purple;
+@link-hover-color: @light-purple;
 
 // Tag cloud
-@tag-bg: fade(#c4fb00, 41%);;
-@tag-hover-color: fade(@green2, 44%);
+@tag-bg: fade(#4D1C4A, 41%);;
+@tag-hover-color: fade(@light-purple, 44%);
 
 // Buttons
-@btn-bg: fade(#c4fb00, 41%);
-@btn-hover-color: fade(@green2, 44%);
+@btn-bg: fade(#4D1C4A, 41%);
+@btn-hover-color: fade(@light-purple, 44%);
 
 @btn-text-color: @white;
 
@@ -31,6 +31,16 @@ a {
 
 a:hover {
   color: @link-hover-color;
+}
+
+aside a
+{
+  color: @link-color ~'!important';
+}
+
+aside a:hover
+{
+  color: @link-hover-color ~'!important';
 }
 
 .tag-cloud {
@@ -68,7 +78,7 @@ a.btn:hover {
 /*Stork Search START*/
 .stork a:link,
 .stork a:visited {
-  color: @yellow ~'!important';
+  color: @purple ~'!important';
 }
 
 .stork-output-visible {
@@ -94,7 +104,7 @@ a.btn:hover {
 
 // Summary START
 summary::marker {
-  color: @yellow;
+  color: @purple;
 }
 
 //summary::after {
