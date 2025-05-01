@@ -1,7 +1,8 @@
 @import "variables.less";
 
-@purple: #b16286;
-@light-purple: #d3869b;
+@purple: #b16286; // That's anubis light theme :)
+@light-purple: #d3869b; // That's anubis light theme :)
+@light-purple2: #EC85BA;
 
 // Links
 @link-color: @purple;
@@ -9,13 +10,11 @@
 
 // Tag cloud
 @tag-bg: fade(#4D1C4A, 41%);;
-@tag-hover-color: fade(@light-purple, 44%);
+@tag-hover-color: fade(@light-purple2, 50%);
 
 // Buttons
 @btn-bg: fade(#4D1C4A, 41%);
-@btn-hover-color: fade(@light-purple, 44%);
-
-@btn-text-color: @white;
+@btn-hover-color: fade(@light-purple2, 50%);
 
 @text-color: #f9f5d7; // That's anubis light theme :)
 
@@ -27,6 +26,7 @@ p {
 a {
   color: @link-color;
   text-decoration: none;
+  text-shadow: 0 0 4px #b10ced;
 }
 
 a:hover {
