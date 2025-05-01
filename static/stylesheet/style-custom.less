@@ -29,6 +29,23 @@
 aside div img
 {
   border-radius: unset ~'!important';
+  /* Use color #f9f5d7 aka: @body-bg: LINK: https://angel-rs.github.io/css-color-filter-generator/ */
+  filter: brightness(0) saturate(100%) invert(94%) sepia(5%) saturate(848%) hue-rotate(7deg) brightness(104%) contrast(95%);
+}
+
+aside
+{
+  color: @body-bg ~'!important';
+}
+
+aside a
+{
+  color: @body-bg ~'!important';
+}
+
+aside a:hover
+{
+  color: @link-hover-color~ '!important';
 }
 
 
