@@ -10,8 +10,10 @@
 @link-hover-color: @green1;
 
 // Tag cloud
-@tag-bg: fade(@red, 80%);;
-@tag-hover-color: fade(@green1, 44%);;
+@tag-bg: fade(@red, 80%);
+;
+@tag-hover-color: fade(@green1, 44%);
+;
 
 // Buttons
 @btn-bg: fade(@red, 80%);
@@ -27,25 +29,21 @@
 @github-bg-color: Transparent;
 @youtube-bg-color: Transparent;
 
-aside div img
-{
+aside div img {
   border-radius: unset ~'!important';
   /* Use color #f9f5d7 aka: @body-bg: LINK: https://angel-rs.github.io/css-color-filter-generator/ */
   //filter: brightness(0) saturate(100%) invert(94%) sepia(5%) saturate(848%) hue-rotate(7deg) brightness(104%) contrast(95%);
 }
 
-aside
-{
+aside {
   color: @body-bg ~'!important';
 }
 
-aside a
-{
+aside a {
   color: @body-bg ~'!important';
 }
 
-aside a:hover
-{
+aside a:hover {
   color: @link-hover-color ~'!important';
 }
 
@@ -57,6 +55,10 @@ aside a:hover
 
 blockquote {
   background-color: transparent ~'!important';
+}
+
+blockquote, pre {
+  border-left: 8px solid @sidebar-bg ~'!important';
 }
 
 pre {
@@ -97,6 +99,7 @@ pre {
   background-color: transparent;
   color: @white ~'!important';
 }
+
 /*Stork Search END*/
 
 
@@ -151,11 +154,11 @@ summary::after {
 details[open] > summary::after {
   content: " [Hide]";
 }
+
 //Summary END
 
-#theme-toggle-image-top
-{
-  content:url("../../page/theme_icon_light.png");
+#theme-toggle-image-top {
+  content: url("../../page/theme_icon_light.png");
 }
 
 
