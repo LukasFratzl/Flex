@@ -35,6 +35,21 @@ aside div img {
   //filter: brightness(0) saturate(100%) invert(94%) sepia(5%) saturate(848%) hue-rotate(7deg) brightness(104%) contrast(95%);
 }
 
+main {
+  article {
+    img {
+      border-radius: 25px;
+      //border: 5px solid @link-color;
+      box-shadow: 0 0 5px fade(black, 71%) ~'!important';
+    }
+
+    img:hover {
+      box-shadow: 0 0 30px fade(black, 71%) ~'!important';
+    }
+  }
+}
+
+
 aside {
   color: @body-bg ~'!important';
 }
