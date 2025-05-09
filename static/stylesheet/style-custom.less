@@ -29,10 +29,15 @@
 @github-bg-color: Transparent;
 @youtube-bg-color: Transparent;
 
+
 aside div img {
   border-radius: unset ~'!important';
   /* Use color #f9f5d7 aka: @body-bg: LINK: https://angel-rs.github.io/css-color-filter-generator/ */
   //filter: brightness(0) saturate(100%) invert(94%) sepia(5%) saturate(848%) hue-rotate(7deg) brightness(104%) contrast(95%);
+}
+
+hr {
+  background-color: transparent ~'!important';
 }
 
 main {
@@ -172,8 +177,12 @@ details[open] > summary::after {
 
 //Summary END
 
-#theme-toggle-image-top {
-  content: url("../../page/theme_icon_light.png");
+#dark-theme-btn {
+    display: inherit;
+}
+
+#light-theme-btn {
+    display: none;
 }
 
 
