@@ -7,14 +7,14 @@
 <!DOCTYPE html>
 <html lang="{{ DEFAULT_LANG }}">
 <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="HandheldFriendly" content="True" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   {% if page in hidden_pages %}
-  <meta name="robots" content="noindex, nofollow" />
+  <meta name="robots" content="noindex, nofollow">
   {% else %}
-  <meta name="robots" content="{{ ROBOTS }}" />
+  <meta name="robots" content="{{ ROBOTS }}">
   {% endif %}
 
   {% if USE_GOOGLE_FONTS != False %}
@@ -74,13 +74,13 @@
       <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400|Open+Sans" rel="stylesheet">
       {% endif %}
     <link rel="stylesheet" 
-    href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/tipuesearch/tipuesearch.min.css" />
+    href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/tipuesearch/tipuesearch.min.css">
   {% endif %}
 
   {% if 'pelican.plugins.search' in PLUGINS %}
   <link rel="stylesheet"
         type="text/css"
-        href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/stork/stork.css" />
+        href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/stork/stork.css">
   {% endif %}
 
 {#  <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/font-awesome/css/fontawesome.css">#}
@@ -90,6 +90,8 @@
   {% if CUSTOM_CSS %}
   <link rel="stylesheet" type="text/css" href="{% if main_siteurl is defined %}{{ main_site }}{% else %}{{ SITEURL }}{% endif %}/{{ CUSTOM_CSS }}">
   {% endif %}
+
+    {{ CUSTOM_HEAD_LINKS }}
 
   {% include "partial/icon.html" %}
 
@@ -108,11 +110,11 @@
   {% endif %}
 
   {% if WEBMENTION_URL %}
-    <link rel="webmention" href="{{ WEBMENTION_URL }}" />
+    <link rel="webmention" href="{{ WEBMENTION_URL }}">
   {% endif %}
 
   {% if PINGBACK_URL %}
-    <link rel="pingback" href="{{ PINGBACK_URL }}" />
+    <link rel="pingback" href="{{ PINGBACK_URL }}">
   {% endif %}
 
   {% if not PLUGINS or 'seo' not in PLUGINS %}
@@ -132,8 +134,8 @@
   {% endif %} 
 
   {% block meta %}
-    <meta name="author" content="{{ AUTHOR }}" />
-    <meta name="description" content="{{ SITEDESCRIPTION }}" />
+    <meta name="author" content="{{ AUTHOR }}">
+    <meta name="description" content="{{ SITEDESCRIPTION }}">
     {% include "partial/og.html" %}
   {% endblock %}
 
@@ -151,8 +153,12 @@
 
   {% include "partial/gtm.html" %}
   {% include "partial/clarity.html" %}
+
+    {{ CUSTOM_HEAD_END_CONTENT }}
 </head>
 <body {% if not THEME_COLOR_AUTO_DETECT_BROWSER_PREFERENCE %}class="{{ THEME_COLOR|default('light') }}-theme"{% endif %}>
+
+    {{ CUSTOM_BODY_START_CONTENT }}
 
 {#<div class="requires-js" style="width: 100% !important; position: fixed; z-index: 2000; color: white;">#}
 {#    <noscript>JavaScript off.</noscript>#}
