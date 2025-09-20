@@ -2,7 +2,7 @@
 
 {% block meta %}
 <meta name="author" content="{{ article.author.name }}">
-<meta name="description" content="{{ article.summary|striptags|escape }}">
+<meta name="description" content="{{ (CUSTOM_OG_DESCRIPTION+article.summary)|striptags|escape }}">
 <meta name="keywords" content="{{ article.tags|join(', ')|escape }}">
 
 {% if article.translations -%}
@@ -34,6 +34,17 @@
         &#8226; {{ _('%(minutes)s min read', minutes=article.stats['read_mins']) }}
       {% endif %}
     </p>
+
+      <div class="tag-cloud">
+      <p>
+      {% if article.tags %}
+      {% for tag in article.tags %}
+      <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
+      {% endfor %}
+      {% endif %}
+    </p>
+  </div>
+
   </header>
 
   {% if GOOGLE_ADSENSE and GOOGLE_ADSENSE.ads.article_top %}

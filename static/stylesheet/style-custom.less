@@ -1,22 +1,26 @@
 @import "variables.less";
 
-@red: #b07b7b;
-@green1: #7bb092;
 
-@sidebar-bg: @red;
+@green1: #7bb092;
+@green2: #a6b07b;
+@green3: #c7e5b1;
+
+@sidebar-bg: @green2;
+
+// nav / footer border
+@nav-border-color: transparent ~'!important';
+@footer-border-color: transparent ~'!important';
 
 // Links
-@link-color: @red;
+@link-color: @green2;
 @link-hover-color: @green1;
 
 // Tag cloud
-@tag-bg: fade(@red, 80%);
-;
+@tag-bg: fade(@green2, 80%);
 @tag-hover-color: fade(@green1, 44%);
-;
 
 // Buttons
-@btn-bg: fade(@red, 80%);
+@btn-bg: fade(@green2, 80%);
 @btn-hover-color: fade(@green1, 44%);
 
 //@body-bg: #cce5ff;
@@ -26,8 +30,8 @@
 
 @body-bg: #f9f5d7; // That's anubis light theme :)
 
-@github-bg-color: Transparent;
-@youtube-bg-color: Transparent;
+@github-bg-color: Transparent ~'!important';
+@youtube-bg-color: Transparent ~'!important';
 
 
 aside div img {
@@ -64,7 +68,7 @@ aside a {
 }
 
 aside a:hover {
-  color: @link-hover-color ~'!important';
+  color: @green3 ~'!important';
 }
 
 
@@ -102,12 +106,12 @@ pre {
 
 .stork-output-visible {
   border: 1px solid @white ~'!important';
-  background-color: @red ~'!important';
+  background-color: @green2 ~'!important';
 }
 
 .stork-input {
   color: @white;
-  background-color: @red;
+  background-color: @green1;
   border: 1px solid @white ~'!important';
 }
 
@@ -185,6 +189,10 @@ details[open] > summary::after {
     display: none;
 }
 
+
+footer p {
+    font-size: inherit ~'!important';
+}
 
 
 

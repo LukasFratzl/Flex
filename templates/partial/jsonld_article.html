@@ -19,7 +19,7 @@
     },
     "image": "{{ article.metadata.get('cover', default_cover) }}",
     "url": "{{ SITEURL }}/{{ article.url }}",
-    "description": "{{ article.summary|striptags }}"
+    "description": "{{ (CUSTOM_OG_DESCRIPTION+article.summary)|striptags }}"
   }
   </script>
 {% endif %}

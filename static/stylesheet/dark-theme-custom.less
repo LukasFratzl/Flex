@@ -4,19 +4,41 @@
 @light-purple: #d3869b; // That's anubis light theme :)
 @light-purple2: #EC85BA;
 
+@green1: #7bb092;
+@green2: #a6b07b;
+@green3: #c7e5b1;
+
+// nav / footer border
+@nav-border-color: transparent ~'!important';
+@footer-border-color: transparent ~'!important';
+
 // Links
-@link-color: @purple;
-@link-hover-color: @light-purple;
+@link-color: @green2;
+@link-hover-color: @green1;
 
 // Tag cloud
-@tag-bg: fade(#4D1C4A, 41%);;
-@tag-hover-color: fade(@light-purple2, 50%);
+@tag-bg: fade(@green2, 80%);
+@tag-hover-color: fade(@green1, 44%);
 
 // Buttons
-@btn-bg: fade(#4D1C4A, 41%);
-@btn-hover-color: fade(@light-purple2, 50%);
+@btn-bg: fade(@green2, 80%);
+@btn-hover-color: fade(@green1, 44%);
 
-@text-color: #f9f5d7; // That's anubis light theme :)
+//@body-bg: #cce5ff;
+//@body-bg: #cdffff;
+//@body-bg: #cdffd5;
+//@body-bg: #dfffcd; // #dfffcd That's pretty solid :)
+
+@body-bg: #f9f5d7; // That's anubis light theme :)
+
+@github-bg-color: Transparent ~'!important';
+@youtube-bg-color: Transparent ~'!important';
+
+@text-color: #717171;
+
+body {
+  color: @text-color;
+}
 
 p {
   color: @text-color;
@@ -26,7 +48,7 @@ p {
 a {
   color: @link-color;
   text-decoration: none;
-  text-shadow: 0 0 4px #b10ced;
+  //text-shadow: 0 0 4px #b10ced;
 }
 
 a:hover {
@@ -132,7 +154,7 @@ a.btn:hover {
 
 // Summary START
 summary::marker {
-  color: @purple;
+  color: @btn-text-color;
 }
 
 //summary::after {
