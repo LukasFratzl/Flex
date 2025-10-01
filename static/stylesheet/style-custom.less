@@ -8,8 +8,8 @@
 @sidebar-bg: @green2;
 
 // nav / footer border
-@nav-border-color: transparent ~'!important';
-@footer-border-color: transparent ~'!important';
+@nav-border-color: fade(@green2, 0%);
+@footer-border-color: @sidebar-bg;
 
 // Links
 @link-color: @green2;
@@ -56,6 +56,10 @@ main {
       box-shadow: 0 0 30px fade(black, 71%) ~'!important';
     }
   }
+}
+
+main nav {
+  border-bottom-color: @nav-border-color;
 }
 
 
@@ -194,7 +198,20 @@ footer p {
     font-size: inherit ~'!important';
 }
 
+#cookie-info-footer
+{
+    background-color: @body-bg~'!important';
+    color: @link-color~'!important';
+}
 
+#cookie-info-link {
+    color: @link-color~'!important';
+}
+
+#cookie-info-footer-line
+{
+    border-top: 3px solid @body-bg~'!important';
+}
 
 
 
