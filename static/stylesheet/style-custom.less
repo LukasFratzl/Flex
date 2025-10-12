@@ -62,6 +62,21 @@ main nav {
   border-bottom-color: @nav-border-color;
 }
 
+main article a {
+  font-weight: bolder;
+  font-size: 1.1em;
+  text-decoration: underline
+}
+
+.tag-cloud a {
+  text-decoration: unset;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  a {
+  	text-decoration: unset ~'!important';	
+  }
+}
 
 aside {
   color: @body-bg ~'!important';
