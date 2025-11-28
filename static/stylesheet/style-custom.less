@@ -4,8 +4,9 @@
 @green1: #7bb092;
 @green2: #a6b07b;
 @green3: #c7e5b1;
+@brown: #917223;
 
-@sidebar-bg: @green2;
+@sidebar-bg: @brown;
 
 // nav / footer border
 @nav-border-color: fade(@green2, 0%);
@@ -213,19 +214,28 @@ footer p {
     font-size: inherit ~'!important';
 }
 
-#cookie-info-footer
-{
-    background-color: @body-bg~'!important';
-    color: @link-color~'!important';
+#cookie-consent-popup {
+  color: @text-color;
+  background-color: Transparent;
+  backdrop-filter: blur(5px);
 }
 
-#cookie-info-link {
-    color: @link-color~'!important';
+#cookie-consent-popup a {
+  color: @link-color;
+  text-decoration: underline;
 }
 
-#cookie-info-footer-line
-{
-    border-top: 3px solid @body-bg~'!important';
+#cookie-consent-popup a:hover {
+  color: @link-hover-color;
+}
+
+#cookie-consent-popup a.btn {
+   text-decoration: none;
+   color: @btn-text-color;
+}
+
+#cookie-consent-popup a.btn:hover {
+   color: @btn-text-color;
 }
 
 
