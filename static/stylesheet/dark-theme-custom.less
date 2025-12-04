@@ -5,23 +5,22 @@
 @light-purple2: #EC85BA;
 
 @green1: #7bb092;
-@green2: #a6b07b;
-@green3: #c7e5b1;
+@gray1: #a2a2a2;
 
 // nav / footer border
-@nav-border-color: fade(@green2, 0%);
+@nav-border-color: fade(@gray1, 0%);
 @footer-border-color: @sidebar-bg-dark-theme;
 
 // Links
-@link-color: @green2;
+@link-color: @gray1;
 @link-hover-color: @green1;
 
 // Tag cloud
-@tag-bg: fade(@green2, 80%);
+@tag-bg: fade(@gray1, 80%);
 @tag-hover-color: fade(@green1, 44%);
 
 // Buttons
-@btn-bg: fade(@green2, 80%);
+@btn-bg: fade(@gray1, 80%);
 @btn-hover-color: fade(@green1, 44%);
 
 //@body-bg: #cce5ff;
@@ -186,4 +185,14 @@ summary {
 
 #dark-theme-btn {
     display: none;
+}
+
+#cookie-consent-popup {
+  color: @text-color;
+  border-top: 2px solid @link-color;
+  border-left: 2px solid @link-color;
+}
+
+#cookie-consent-popup a {
+  color: @link-color;
 }
