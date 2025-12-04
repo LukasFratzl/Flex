@@ -61,6 +61,29 @@ main {
 
 main nav {
   border-bottom-color: @nav-border-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-mobile {
+      display: unset;
+}
+.nav-full {
+      display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .nav-mobile { 
+        display: none;
+    }
+    .nav-full {
+      	display: unset;
+    }
+}
+main nav div a {
+	display: flow!important;
+	padding-bottom: 10px;
 }
 
 main article a {

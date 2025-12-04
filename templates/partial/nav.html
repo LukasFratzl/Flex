@@ -1,17 +1,33 @@
 {% if MAIN_MENU %}
 <nav>
-  <a href="{{ SITEURL }}/">{{ _('Home') }}</a>
+  <a class="nav-full" href="{{ SITEURL }}/">{{ _('Home') }}</a>
 
   {% for title, link in MENUITEMS %}
-  <a href="{{ link }}">{{ _(title) }}</a>
+  <a class="nav-full" href="{{ link }}">{{ _(title) }}</a>
   {% endfor %}
 
   {% if FEED_ALL_ATOM %}
-  <a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}">{{ _('Atom') }}</a>
+  <a class="nav-full" href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}">{{ _('Atom') }}</a>
   {% endif %}
 
   {% if FEED_ALL_RSS %}
-  <a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}">{{ _('RSS') }}</a>
+  <a class="nav-full" href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}">{{ _('RSS') }}</a>
   {% endif %}
+  
+  <div class="nav-mobile">
+    <a class="nav-mobile" href="{{ SITEURL }}/">{{ _('Home') }}</a>
+  
+    {% for title, link in MENUITEMS %}
+    <a class="nav-mobile" href="{{ link }}">{{ _(title) }}</a>
+    {% endfor %}
+
+    {% if FEED_ALL_ATOM %}
+    <a class="nav-mobile" href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}">{{ _('Atom') }}</a>
+    {% endif %}
+
+    {% if FEED_ALL_RSS %}
+    <a class="nav-mobile" href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}">{{ _('RSS') }}</a>
+    {% endif %}
+  </div>
 </nav>
 {% endif %}
