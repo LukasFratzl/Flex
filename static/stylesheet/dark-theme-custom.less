@@ -54,6 +54,21 @@ a:hover {
   color: @link-hover-color;
 }
 
+aside
+{
+  background-color: @body-bg-dark-theme ~'!important';
+  border-right: unset;
+}
+
+@media screen and (min-width: 768px) {
+    aside {
+    	border-right: solid ~'!important';
+    	border-right-width: 1px ~'!important';
+  	border-right-color: @footer-border-color ~'!important';
+  	border-right: solid;
+    }
+}
+
 aside a
 {
   color: @link-color ~'!important';
