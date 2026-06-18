@@ -5,12 +5,11 @@
 @green2: #a6b07b;
 @green3: #c7e5b1;
 @brown: #917223;
-
-@sidebar-bg: @brown;
+@black: #000000;
 
 // nav / footer border
 @nav-border-color: fade(@green2, 0%);
-@footer-border-color: @sidebar-bg;
+@footer-border-color: @black;
 
 // Links
 @link-color: @green2;
@@ -30,6 +29,7 @@
 //@body-bg: #dfffcd; // #dfffcd That's pretty solid :)
 
 @body-bg: #f9f5d7; // That's anubis light theme :)
+@sidebar-bg: @body-bg;
 
 @github-bg-color: Transparent ~'!important';
 @youtube-bg-color: Transparent ~'!important';
@@ -115,15 +115,24 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 aside {
-  color: @body-bg ~'!important';
+  color: @black ~'!important';
 }
 
 aside a {
-  color: @body-bg ~'!important';
+  color: @black ~'!important';
 }
 
 aside a:hover {
   color: @green3 ~'!important';
+}
+
+@media screen and (min-width: 768px) {
+    aside {
+    	border-right: solid ~'!important';
+    	border-right-width: 1px ~'!important';
+  	border-right-color: @footer-border-color ~'!important';
+  	border-right: solid;
+    }
 }
 
 
