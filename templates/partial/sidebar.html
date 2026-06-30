@@ -1,8 +1,9 @@
 <aside>
   <div>
     <a href="{{ SITEURL }}/">
-      {% if SITELOGO %}
-      <img src="{{ SITELOGO }}" alt="{{ SITETITLE }}" title="{{ SITETITLE }}">
+      {% if SITELOGO_LIGHT and SITELOGO_DARK %}
+      <img class="logo_light" src="{{ SITELOGO_LIGHT }}" alt="{{ SITETITLE }}" title="{{ SITETITLE }}">
+      <img class="logo_dark" src="{{ SITELOGO_DARK }}" alt="{{ SITETITLE }}" title="{{ SITETITLE }}">
       {% else %}
       <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/profile.png" alt="{{ SITETITLE }}" title="{{ SITETITLE }}">
       {% endif %}
